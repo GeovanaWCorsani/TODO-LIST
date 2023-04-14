@@ -1,0 +1,54 @@
+@import'../../../../../dist/scss/variavel.scss';
+
+//Essa parte vai representar a parte onde deve fazer toda a função de digitar as task.
+section{
+ width: 100%;
+ min-height: 250px;
+
+ background: $secondary-background-color;
+ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+
+margin-top: 20px;
+
+//Aqui é a estilirização do icon quando não há nenhuma informação na task.
+&.loading{
+background-image: url("../../../../../assets/img/add.task.png");
+background-repeat: no-repeat;
+background-position: center 80px;
+}
+
+ul{
+  padding: 20%;
+
+  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    input{
+      &[type="checkbox"]{
+        width: 5%;
+      }
+      &[type="text"]{
+        width: 80%;
+        padding: 5px 10px;
+        border: none;
+
+        font-size: 16px;
+        color: $primary-text-color;
+        &.checked{
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    bottom{
+      width: 5%;
+      background: none;
+      border: none;
+    }
+  }
+ }
+}
